@@ -46,10 +46,29 @@
         .blkBorder {
             border: solid; 
             border-color: rgb(50,50,50);
+            border-width: medium;
         }
-        .mainButton {
+        .whiteButton {
+            border-width: thin;
+            border: solid;
+            border-color: rgb(50,50,50);
+            background-color: white;
+            margin-bottom: 15px;
+        }
 
+        .blackButton {
+            border-width: thin;
+            border: solid;
+            border-color: white;
+            background-color: rgb(50,50,50);
+            margin-bottom: 15px;
+            color: white;
         }
+
+        #blogButton:hover {
+            color: white;
+        }
+
     </style>
     <div class="container-fluid">
         <div class="row">
@@ -72,6 +91,7 @@
                             Mauris sollicitudin lorem sed lacus maximus, vel tristique erat ultrices.
                             Curabitur pretium sapien nec ipsum porttitor lobortis
                         </p>
+                        <button id="blogButton" class="btn blackButton paraFont" onclick="window.location.href='/blog/blogmain.html'">Read More</button>
                     </div>
                     <div class="blkBorder col-md-6 col-xs-12">
                         <h2 class="paraHeader">About Myself</h2>
@@ -81,6 +101,7 @@
                             Mauris sollicitudin lorem sed lacus maximus, vel tristique erat ultrices.
                             Curabitur pretium sapien nec ipsum porttitor lobortis
                         </p>
+                        <button class="btn whiteButton paraFont" onclick="window.location.href='/about/max.html'">Read More</button>
                     </div>
                 </div>
             </div>
