@@ -13,81 +13,178 @@
 </head>
 <body>
     <style>
-        .titleStyle {
-            font-family: Julius Sans One;
-            margin-top: 6vw;
-            margin-bottom: 1vw;
-            text-align: center;
-            font-size: 7vw;
-        }
-        .subtitleStyle {
-            font-family: Julius Sans One;
-            margin: 1vw 20px 3vw 20px;
-            text-align: center;
-            font-size: 2vw;
+        @media only screen and (max-width:400px) {
+            .titleStylePhone {
+                font-family: Julius Sans One;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 30pt;
+                color: white;
+            }
+
+            .subtitleStyle {
+                font-family: Julius Sans One;
+                margin: 0 20px 0 20px;
+                text-align: center;
+                font-size: 14pt;
+                color: white;
+            }
+
+            .backgroundPano {
+                background-image: url(/costaricaPano.JPG);
+                background-size: 100% 100%;
+                height: auto;
+                width: 100%
+            }
+
+            .paraHeader {
+                font-size: 14pt;
+                text-align: left;
+                font-family: Julius Sans One;
+            }
+
+            .paraFont {
+                text-align: left;
+                font-family: Open Sans Condensed;
+                font-size: 11pt;
+            }
+
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
+
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
+
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 16pt;
+                white-space: pre-line;
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
         }
 
-        .paraHeader {
-            font-size: 17pt;
-            text-align: left;
-            font-family: Julius Sans One;
-        }
+        @media only screen and (min-width: 401px) {
+            .titleStyleDesktop {
+                font-family: Julius Sans One;
+                margin-top: 6vw;
+                margin-bottom: 1vw;
+                text-align: center;
+                font-size: 9vw;
+                color: white;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
 
-        .paraFont {
-            text-align: left;
-            font-family: Open Sans Condensed;
-            font-size: 14pt;
-        }
+            .subtitleStyle {
+                font-family: Julius Sans One;
+                margin: 0px 20px 0px 20px;
+                text-align: center;
+                font-size: 3vw;
+                color: white;
+            }
 
-        .blkBackground {
-            background-color: rgb(50,50,50);
-            border-color: rgb(50,50,50);
-        }
+            .paraHeader {
+                font-size: 17pt;
+                text-align: left;
+                font-family: Julius Sans One;
+            }
 
-        .blkBorder {
-            border: solid; 
-            border-color: rgb(50,50,50);
-            border-width: medium;
-        }
-        .whiteButton {
-            border-width: thin;
-            border: solid;
-            border-color: rgb(50,50,50);
-            background-color: white;
-            margin-bottom: 15px;
-        }
+            .paraFont {
+                text-align: left;
+                font-family: Open Sans Condensed;
+                font-size: 14pt;
+            }
 
-        .blackButton {
-            border-width: thin;
-            border: solid;
-            border-color: white;
-            background-color: rgb(50,50,50);
-            margin-bottom: 15px;
-            color: white;
-        }
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
 
-        #blogButton:hover {
-            color: white;
-        }
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
 
-        .imgAlign{
-            
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 14pt;
+                white-space: pre-line;
+            }
+
+            .backgroundPano {
+                background-image: url(/costaricaPano.JPG);
+                background-size: 100% auto;
+                height: 100%;
+                width: 100%;
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
         }
     </style>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="titleStyle">Max Berkowitz</h1>
+        <div class="row backgroundPano">
+            <div class="row">
+                <h1 class="titleStyleDesktop titleStylePhone">Max Berkowitz</h1>
             </div>
-        </div>
-        <div class="row">
-            <h2 class="subtitleStyle">Engineer, Creator, Designer and Writer</h2>
+            <div class="row">
+                <h2 class="subtitleStyle">Engineer, Creator, Designer and Writer</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
                 <div class="row">
-                    <p style="font-family: Open Sans; font-weight:300; font-style: italic; font-size: 17pt; white-space: pre-line;">
+                    <p class="introHeader">
                         Hi there! My name is Max, and this is my website. Welcome! On this site, you will find a variety of content, but it will all fall under one common theme: the journey of young creators, thinkers, and innovators on the path to achieving what matters <strong>most</strong> to us – whatever that may be. In creating this website, I hope to share my thoughts on the world from the perspective of a student and young professional. I hope to spark conversation around what motivates you and I to pursue our greatest ambitions. Most importantly (and maybe optimistically), I hope I might inspire you to wake up tomorrow and put your nose to the grindstone on whatever matters most to <strong>you</strong> – because I believe life is best when you’re spending it doing something you love.
 
                         So please, take a look around. And hit up the Contact section let me know what you think! There’s nothing I welcome more than a good conversation.
@@ -126,17 +223,17 @@
         <div class="row" style="background-color: rgb(50,50,50); height:auto; text-align: center">
             <div class="col-sm-4 col-xs-12">
                 <div>
-                    <a href="mailto:berkowitzmax@gmail.com"><img src="/googlemail.png" class="imgAlign" style="height:40px"/></a>
+                    <a href="mailto:berkowitzmax@gmail.com"><img src="/googlemail.png" class="imgAlign" style="height:40px" /></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="row">
-                    <a href="https://www.linkedin.com/in/maxberkowitz/"><img src="/linkedin.svg"  class="imgAlign"  style="height:40px"/></a>
+                    <a href="https://www.linkedin.com/in/maxberkowitz/"><img src="/linkedin.svg" class="imgAlign" style="height:40px" /></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="row">
-                    <a href="https://github.com/maxwellberkowitz"><img src="/Octocat.png" class="imgAlign" style="height:40px"/></a>
+                    <a href="https://github.com/maxwellberkowitz"><img src="/GitHub_Logo-1.png" class="imgAlign" style="height:40px" /></a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head runat="server">
     <title class="titleStyle">Max Berkowitz</title>
@@ -12,51 +12,166 @@
 </head>
 <body>
     <style>
-        .titleStyle {
-            font-family: Julius Sans One;
-            margin-top: 6vw;
-            margin-bottom: 1vw;
-            text-align: center;
-            font-size: 7vw;
-        }
-        .subtitleStyle {
-            font-family: Julius Sans One;
-            margin: 1vw 20px 3vw 20px;
-            text-align: center;
-            font-size: 2vw;
+        @media only screen and (max-width:400px) {
+            .titleStylePhone {
+                font-family: Julius Sans One;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 30pt;
+                color: white;
+            }
+
+            .subtitleStyle {
+                font-family: Julius Sans One;
+                margin: 0 20px 0 20px;
+                text-align: center;
+                font-size: 14pt;
+                color: white;
+            }
+
+            .backgroundPano {
+                background-image: url(/costaricaPano.JPG);
+                background-size: 100% 100%;
+                height: auto;
+                width: 100%
+            }
+
+            .paraHeader {
+                font-size: 14pt;
+                text-align: left;
+                font-family: Julius Sans One;
+            }
+
+            .paraFont {
+                text-align: left;
+                font-family: Open Sans Condensed;
+                font-size: 11pt;
+            }
+
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
+
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
+
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 16pt;
+                white-space: pre-line;
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
         }
 
-        .paraHeader {
-            font-size: 16pt;
-            text-align: left;
-            font-family: Julius Sans One;
-        }
+        @media only screen and (min-width: 401px) {
+            .titleStyleDesktop {
+                font-family: Julius Sans One;
+                margin-top: 6vw;
+                margin-bottom: 1vw;
+                text-align: center;
+                font-size: 9vw;
+                color: white;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
 
-        .paraFont {
-            text-align: left;
-            font-family: Open Sans Condensed;
-            font-size: 12pt;
-        }
+            .subtitleStyle {
+                font-family: Julius Sans One;
+                margin: 0px 20px 0px 20px;
+                text-align: center;
+                font-size: 3vw;
+                color: white;
+            }
 
-        .blkBackground {
-            background-color: rgb(50,50,50);
-            border-color: rgb(50,50,50);
-        }
+            .paraHeader {
+                font-size: 17pt;
+                text-align: left;
+                font-family: Julius Sans One;
+            }
 
-        .blkBorder {
-            border: solid; 
-            border-color: rgb(50,50,50);
-        }
-        .mainButton {
+            .paraFont {
+                text-align: left;
+                font-family: Open Sans Condensed;
+                font-size: 14pt;
+            }
 
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
+
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
+
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 14pt;
+                white-space: pre-line;
+            }
+
+            .backgroundPano {
+                background-image: url(/costaricaPano.JPG);
+                background-size: 100%;
+                height: 100%;
+                width: 100%
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
         }
     </style>
-    <div class="container-fluid">
-        <div class="row">
-            <h1 class="subtitleStyle">
-                About Myself
-            </h1>
-        <div>
+    <div class="row" style="background-color:mediumpurple; height:100px;">
+
     </div>
 </body>
 </html>
