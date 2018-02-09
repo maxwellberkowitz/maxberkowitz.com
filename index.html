@@ -186,6 +186,19 @@
             }
         }
     </style>
+    <script>
+        $(function () {
+            $("#textIntroButton").toggle(
+                function () {
+                    $("#textIntro").hide();
+                    $("#textIntroButton").val("Show");
+                },
+                function () {
+                    $("#textIntro").show();
+                    $("#textIntroButton").val("Hide");
+                });
+        });
+    </script>
     <div class="container-fluid">
         <div class="row backgroundPano">
             <div class="row">
@@ -194,6 +207,23 @@
             <div class="row">
                 <h2 class="subtitleStyle">Engineer, Creator, Designer and Writer</h2>
             </div>
+        </div>
+        <div class="row" id="introButtonRow">
+            <div class="col-md-3"></div>
+            <div class="col-md-1">
+                <button class="btn whiteButton paraFont target" id="textIntroButton">Read Intro</button>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-1">
+                <button class="btn whiteButton paraFont" id="videoIntroButton">Watch Intro</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row" id="textIntro">
+            <h1>Text Intro!</h1>
+        </div>
+        <div class="row" id="videoIntro">
+            <h1>Video Intro!</h1>
         </div>
         <div class="row">
             <div class="col-xs-1"></div>
