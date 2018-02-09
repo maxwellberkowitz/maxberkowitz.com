@@ -25,7 +25,9 @@
 
             .subtitleStyle {
                 font-family: Julius Sans One;
-                margin: 0 20px 0 20px;
+                margin-bottom: 10px;
+                margin-left: 20px;
+                margin-right: 20px;
                 text-align: center;
                 font-size: 14pt;
                 color: white;
@@ -33,9 +35,10 @@
 
             .backgroundPano {
                 background-image: url(/costaricaPano.JPG);
-                background-size: 100% 100%;
-                height: auto;
-                width: 100%
+                background-size: cover;
+                height: 100%;
+                width: 110%;
+                float: right;
             }
 
             .paraHeader {
@@ -89,13 +92,18 @@
             #blogButton:hover {
                 color: white;
             }
+
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
         }
 
         @media only screen and (min-width: 401px) {
             .titleStyleDesktop {
                 font-family: Julius Sans One;
-                margin-top: 6vw;
-                margin-bottom: 1vw;
+                margin-top: 3vw;
+                margin-bottom: 3vw;
                 text-align: center;
                 font-size: 9vw;
                 color: white;
@@ -105,7 +113,7 @@
 
             .subtitleStyle {
                 font-family: Julius Sans One;
-                margin: 0px 20px 0px 20px;
+                margin: 0px 0px 2vw 0px;
                 text-align: center;
                 font-size: 3vw;
                 color: white;
@@ -161,20 +169,27 @@
 
             .backgroundPano {
                 background-image: url(/costaricaPano.JPG);
-                background-size: 100% auto;
+                background-size: cover;
                 height: 100%;
-                width: 100%;
+                width: 110%;
+                float: right;
+
             }
 
             #blogButton:hover {
                 color: white;
+            }
+
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
             }
         }
     </style>
     <div class="container-fluid">
         <div class="row backgroundPano">
             <div class="row">
-                <h1 class="titleStyleDesktop titleStylePhone">Max Berkowitz</h1>
+                <h1 class="titleStylePhone titleStyleDesktop">Max Berkowitz</h1>
             </div>
             <div class="row">
                 <h2 class="subtitleStyle">Engineer, Creator, Designer and Writer</h2>
@@ -220,7 +235,7 @@
             </div>
             <div class="col-xs-1"></div>
         </div>
-        <div class="row" style="background-color: rgb(50,50,50); height:auto; text-align: center">
+        <div class="row" style="background-color: rgb(50,50,50); height:auto; text-align: center; margin-top:2vw">
             <div class="col-sm-4 col-xs-12">
                 <div>
                     <a href="mailto:berkowitzmax@gmail.com"><img src="/googlemail.png" class="imgAlign" style="height:40px" /></a>
