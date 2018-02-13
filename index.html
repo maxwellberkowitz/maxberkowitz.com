@@ -37,7 +37,7 @@
                 background-image: url(/costaricaPano.JPG);
                 background-size: cover;
                 height: 100%;
-                width: 110%;
+                width: 100%;
                 float: right;
             }
 
@@ -169,11 +169,10 @@
 
             .backgroundPano {
                 background-image: url(/costaricaPano.JPG);
-                background-size: cover;
+                background-size: 100%;
                 height: 100%;
-                width: 110%;
-                float: right;
-
+                width: 104%;
+                float: left;
             }
 
             #blogButton:hover {
@@ -186,19 +185,6 @@
             }
         }
     </style>
-    <script>
-        $(function () {
-            $("#textIntroButton").toggle(
-                function () {
-                    $("#textIntro").hide();
-                    $("#textIntroButton").val("Show");
-                },
-                function () {
-                    $("#textIntro").show();
-                    $("#textIntroButton").val("Hide");
-                });
-        });
-    </script>
     <div class="container-fluid">
         <div class="row backgroundPano">
             <div class="row">
@@ -209,26 +195,23 @@
             </div>
         </div>
         <div class="row" id="introButtonRow">
-            <div class="col-md-3"></div>
-            <div class="col-md-1">
-                <button class="btn whiteButton paraFont target" id="textIntroButton">Read Intro</button>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-5" style="text-align:center">
+                <button class="btn whiteButton paraFont" id="textIntroButton" onclick="readIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px">
+                    Read Intro
+                </button>
             </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-1">
-                <button class="btn whiteButton paraFont" id="videoIntroButton">Watch Intro</button>
+            <div class="col-xs-5" style="text-align:center">
+                <button class="btn whiteButton paraFont" id="videoIntroButton" onclick="watchIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px;">
+                    Watch Intro
+                </button>
             </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row" id="textIntro">
-            <h1>Text Intro!</h1>
-        </div>
-        <div class="row" id="videoIntro">
-            <h1>Video Intro!</h1>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
-                <div class="row">
+                <div class="row" id="textIntro" style="display: none">
                     <p class="introHeader">
                         Hi there! My name is Max, and this is my website. Welcome! On this site, you will find a variety of content, but it will all fall under one common theme: the journey of young creators, thinkers, and innovators on the path to achieving what matters <strong>most</strong> to us – whatever that may be. In creating this website, I hope to share my thoughts on the world from the perspective of a student and young professional. I hope to spark conversation around what motivates you and I to pursue our greatest ambitions. Most importantly (and maybe optimistically), I hope I might inspire you to wake up tomorrow and put your nose to the grindstone on whatever matters most to <strong>you</strong> – because I believe life is best when you’re spending it doing something you love.
 
@@ -239,6 +222,9 @@
                         Max
 
                     </p>
+                </div>
+                <div class="row" id="videoIntro" style="display: none">
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
                 <div class="row" style="margin-bottom: 2vw">
                     <div class="blkBorder blkBackground col-md-6 col-xs-12">
@@ -283,5 +269,27 @@
             </div>
         </div>
     </div>
+    <script>
+        function readIntro() {
+            var x = document.getElementById("textIntro");
+            var y = document.getElementById("videoIntro");
+            y.style.display = "none";
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function watchIntro() {
+            var x = document.getElementById("videoIntro");
+            var y = document.getElementById("textIntro");
+            y.style.display = "none";
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
