@@ -5,15 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i, 400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <style>
@@ -237,52 +236,42 @@
                 display: inline-block;
                 vertical-align: middle;
             }
-
-            #navButton:hover{
-                color:white;
-            }
-
-            #navButton{
-                color: rgb(200,200,200);
-            }
-
-            #navbarDropdown:hover{
-                color:white
-            }
-
-            #navbarDropdown {
-                color: rgb(200,200,200);
-            }
         }
     </style>
-    <nav class="navbar navbar-expand-lg navbar-light paraFont" style="background-color: rgb(50,50,50);">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" id="navButton">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu paraFont" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">All Blog Posts</a>
-                        <a class="dropdown-item" href="#">Most Recent Post</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="navButton" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="navButton" href="#">Contact</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid paraFont">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="caret"></span></a>
+                        <ul class="dropdown-menu whiteButton">
+                            <li><a href="#">All Posts</a></li>
+                            <li><a href="#">Recent Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div>
-        <div class="col-xs-12 backgroundPano imgBackground">
-                <h1 class="titleStylePhone1 titleStyleDesktop" style="text-align:center;">Max Berkowitz</h1>
+    <div class="container-fluid">
+        <div class="row backgroundPano imgBackground">
+            <div class="row">
+                <h1 class="titleStylePhone1 titleStyleDesktop">Max Berkowitz</h1>
             </div>
+            <!--<div class="row">
+                <h2 class="subtitleStyle">Engineer, Creator, Writer</h2>
+            </div>-->
+        </div>
         <div style="text-align:center">
             <div class="dropdown paraFont" style="margin-bottom:90px; margin-top:90px;">
                 <button class="btn btn-default dropdown-toggle whiteButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="font-size:17pt;">
@@ -290,15 +279,39 @@
                 </button>
                 <ul class="dropdown-menu whiteButton" role="menu" aria-labelledby="dropdownMenu1" style=" font-size:15pt;">
                     <li role="presentation">
-                        <a class="dropdown-item" href="#" onclick="watchIntro()">Watch Intro</a>
-                        <a class="dropdown-item" href="#" onclick="readIntro()">Read Intro</a>
+                        <a role="menuitem" tabindex="-1" onclick="watchIntro()">Watch Intro</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" onclick="readIntro()">Read Intro</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <!--<div>
+            <button class="btn whiteButton paraFont" id="videoIntroButton" onclick="watchIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px;">
+                Watch Intro
+            </button>
+        </div>
+        <div>
+            <button class="btn whiteButton paraFont" id="textIntroButton" onclick="readIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px">
+                Read Intro
+            </button>
+        </div>-->
+        <!--<div class="col-xs-1"></div>
+        <div class="col-xs-5" style="text-align:center">
+            <button class="btn whiteButton paraFont" id="textIntroButton" onclick="readIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px">
+                Read Intro
+            </button>
+        </div>
+        <div class="col-xs-5" style="text-align:center">
+            <button class="btn whiteButton paraFont" id="videoIntroButton" onclick="watchIntro()" style="margin-top: 20px; padding-left: 30px; padding-right: 30px;">
+                Watch Intro
+            </button>
+        </div>
+        <div class="col-xs-1"></div>-->
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
                 <div class="row" id="textIntro" style="display: none">
                     <p class="introHeader">
                         <strong> Hi there! </strong> My name is Max, and this is my website. Welcome! On this site, you will find a variety of content, but it will all fall under <strong>one common theme</strong>:
@@ -340,8 +353,8 @@
                         <button class="btn whiteButton paraFont" onclick="window.location.href='/about/max.html'">Read More</button>
                     </div>
                 </div>
-                <div class="row blkBorder blkBackground" style="margin-bottom: 0.5vw;">
-                    <div class="col-12">
+                <div class="row blkBorder blkBackground" style="margin-bottom: 0.5vw">
+                    <div class="col-xs-12">
                         <h2 class="paraHeader" style="color: white">Note About The Website</h2>
                         <p class="paraFont" style="color: white; white-space: pre-line">
                             This website is the toddler-evolved version of a thought-baby which was first conceived around December of 2017. Since then, I have poured every available moment into its growth. However, thought-baby parenting is a learning process, and I would happily accept all the help I can get! This is my first time blogging, website designing, and writing web-related code (HTML, CSS, JavaScript, etc.), and I am not using WordPress or any equivalent design tools.
@@ -355,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-1"></div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row" style="background-color: rgb(50,50,50); height:auto; text-align: center; margin-top:2vw">
             <div class="col-sm-4 col-xs-12">
@@ -364,10 +377,14 @@
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-                    <a href="https://www.linkedin.com/in/maxberkowitz/"><img src="/linkedin.png" class="center-block" style="height:40px" /></a>
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/maxberkowitz/"><img src="/linkedin.png" class="imgAlign" style="height:40px" /></a>
+                </div>
             </div>
             <div class="col-sm-4 col-xs-12">
+                <div class="row">
                     <a href="https://github.com/maxwellberkowitz"><img src="/GitHub_Logo-1.png" class="imgAlign" style="height:40px" /></a>
+                </div>
             </div>
         </div>
     </div>

@@ -1,62 +1,262 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head runat="server">
-    <title class="titleStyle">Max Berkowitz</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <style>
-        .titleStyle {
-            font-family: Julius Sans One;
-            margin-top: 6vw;
-            margin-bottom: 1vw;
-            text-align: center;
-            font-size: 7vw;
-        }
-        .subtitleStyle {
-            font-family: Julius Sans One;
-            margin: 1vw 20px 3vw 20px;
-            text-align: center;
-            font-size: 2vw;
+        @media only screen and (max-width:400px) {
+            .titleStylePhone {
+                font-family: Julius Sans One;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 30pt;
+                color: black;
+            }
+
+            .titleStylePhone1 {
+                font-family: Julius Sans One;
+                text-align: center;
+                font-size: 30pt;
+                color: black;
+            }
+
+            .subtitleStyle {
+                font-family: Julius Sans One;
+                margin-bottom: 10px;
+                margin-left: 20px;
+                margin-right: 20px;
+                text-align: center;
+                font-size: 14pt;
+                color: white;
+            }
+
+            .backgroundPanoPhone {
+                background-image: url();
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                float: right;
+            }
+
+            .paraHeader {
+                font-size: 14pt;
+                text-align: left;
+                font-family: Julius Sans One;
+            }
+
+            .paraFont {
+                text-align: left;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 11pt;
+            }
+
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
+
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
+
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 16pt;
+                white-space: pre-line;
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
+
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
         }
 
-        .paraHeader {
-            font-size: 16pt;
-            text-align: left;
-            font-family: Julius Sans One;
-        }
+        @media only screen and (min-width: 401px) {
+            .titleStyleDesktop {
+                font-family: Julius Sans One;
+                margin-top: 3vw;
+                margin-bottom: 3vw;
+                text-align: center;
+                font-size: 9vw;
+                color: white;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
 
-        .paraFont {
-            text-align: left;
-            font-family: Open Sans Condensed;
-            font-size: 12pt;
-        }
+            .subtitleStyle {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                font-family: Julius Sans One;
+                margin: 0.75vw 0px 2vw 0px;
+                text-align: center;
+                font-size: 3vw;
+                color: white;
+            }
 
-        .blkBackground {
-            background-color: rgb(50,50,50);
-            border-color: rgb(50,50,50);
-        }
+            .paraHeader {
+                font-size: 18pt;
+                text-align: left;
+                font-family: Julius Sans One;
+                font-weight: 600;
+            }
 
-        .blkBorder {
-            border: solid; 
-            border-color: rgb(50,50,50);
-        }
-        .mainButton {
+            .paraFont {
+                text-align: left;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15pt;
+                font-weight: 300;
+            }
 
+            .blkBackground {
+                background-color: rgb(50,50,50);
+                border-color: rgb(50,50,50);
+            }
+
+            .blkBorder {
+                border: solid;
+                border-color: rgb(50,50,50);
+                border-width: medium;
+            }
+
+            .whiteButton {
+                border-width: thin;
+                border: solid;
+                border-color: rgb(50,50,50);
+                background-color: white;
+                margin-bottom: 15px;
+            }
+
+            .blackButton {
+                border-width: thin;
+                border: solid;
+                border-color: white;
+                background-color: rgb(50,50,50);
+                margin-bottom: 15px;
+                color: white;
+            }
+
+            .introHeader {
+                font-family: Open Sans;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 15.5pt;
+                white-space: pre-line;
+            }
+
+            .backgroundPano {
+                background-image: url(/costaricaPano.JPG);
+                background-size: 100%;
+                height: 100%;
+                width: 104%;
+                float: left;
+            }
+
+            #blogButton:hover {
+                color: white;
+            }
+
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            imgBackground {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+            }
+
+            #contactButton:hover {
+                color: white;
+            }
+
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 35px;
+                height: 0;
+                overflow: hidden;
+            }
+
+                .video-container iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .navbar {
+                margin-bottom: 0;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 5px; /* 5px rounded corners */
+            }
+
+            /* Add rounded corners to the top left and the top right corner of the image */
+            img {
+                border-radius: 5px 5px 0 0;
+            }
+
+            /* On mouse-over, add a deeper shadow */
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+            /* Add some padding inside the card container */
+            .container {
+                padding: 2px 16px;
+            }
         }
     </style>
-    <div class="container-fluid">
-        <div class="row">
-            <h1 class="subtitleStyle" style="text-align: left;">
-                About The Blog
-            </h1>
-        <div>
+    <div class="card">
+        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+        </div>
     </div>
 </body>
 </html>
