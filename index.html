@@ -28,6 +28,7 @@
             }
 
             .titleStylePhone1 {
+                margin-top: 90px;
                 font-family: Julius Sans One;
                 text-align: center;
                 font-size: 30pt;
@@ -107,6 +108,11 @@
             html, body {
                 max-width: 100%;
                 overflow-x: hidden;
+            }
+
+            #navBarLogo {
+                border: 1px solid white;
+                color: rgb(200,200,200);
             }
         }
 
@@ -192,89 +198,121 @@
                 width: 104%;
                 float: left;
             }
+        }
 
-            #blogButton:hover {
-                color: white;
-            }
+        #blogButton:hover {
+            color: white;
+        }
 
-            html, body {
-                max-width: 100%;
-                overflow-x: hidden;
-            }
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
-            imgBackground {
+        imgBackground {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+        }
+
+        #contactButton:hover {
+            color: white;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+        }
+
+            .video-container iframe {
                 position: absolute;
-                z-index: -1;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100%;
             }
 
-            #contactButton:hover {
-                color: white;
-            }
+        .navbar {
+            margin-bottom: 0;
+        }
 
-            .video-container {
-                position: relative;
-                padding-bottom: 56.25%;
-                padding-top: 35px;
-                height: 0;
-                overflow: hidden;
-            }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-                .video-container iframe {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
+        #navButton:hover {
+            color: rgba(255,102,203,0.7);
+        }
 
-            .navbar {
-                margin-bottom: 0;
-            }
+        #navButton {
+            color: rgba(255,102,203,0.5);
+        }
 
-            .dropdown {
-                position: relative;
-                display: inline-block;
-                vertical-align: middle;
-            }
+        #navbarDropdown:hover {
+            color: rgba(255,102,203,0.7);
+        }
 
-            #navButton:hover {
-                color: white;
-            }
+        #navbarDropdown {
+            color: rgba(255,102,203,0.5);
+        }
 
-            #navButton {
-                color: rgb(200,200,200);
-            }
+        #dropdownMenu:hover {
+            background-color: rgb(70,70,70);
+        }
 
-            #navbarDropdown:hover {
-                color: white
-            }
+        #navBarLogo {
+            border: 1px solid rgba(255,102,203,0.5);
+            color: rgba(255,102,203,0.5);
+        }
 
-            #navbarDropdown {
-                color: rgb(200,200,200);
-            }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .custom-toggler .navbar-toggler {
+            border-color: rgb(200,200,200);
+        }
+
+        #dropdownMenu {
+            color: rgba(255,102,203,0.5);
+        }
+
+        #dropdownMenu:hover {
+            color: rgba(255,102,203,0.7);
         }
     </style>
     <nav class="navbar navbar-expand-lg navbar-light paraFont" style="background-color: rgb(50,50,50);">
+        <div class="nav-item" id="navBarLogo">
+            <a class="paraFont nav-link">MAX BERKOWITZ</a>
+        </div>
+        <button style="border-color:rgba(255,102,203,0.5)" class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto paraFont">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="navButton">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/" id="navButton" style="margin-left:10px">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:10px">
                         Blog
                     </a>
-                    <div class="dropdown-menu paraFont" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">All Blog Posts</a>
-                        <a class="dropdown-item" href="#">Most Recent Post</a>
+                    <div class="dropdown-menu paraFont" aria-labelledby="navbarDropdown" style="background-color:rgb(70,70,70);" id="dropdownMenu">
+                        <a class="dropdown-item" href="/blog/blogmain.html" style="margin-left:10px;  color:rgba(255,102,203,0.5)" id="dropdownMenu">All Blog Posts</a>
+                        <a class="dropdown-item" href="/blog/blog1.html" style="margin-left:10px;  color:rgba(255,102,203,0.5)" id="dropdownMenu">Most Recent Post</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="navButton" href="#">Portfolio</a>
+                    <a class="nav-link" id="navButton" href="#" style="margin-left:10px">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="navButton" href="#">Contact</a>
+                    <a class="nav-link" id="navButton" href="#" style="margin-left:10px">Contact</a>
                 </li>
             </ul>
         </div>
@@ -283,9 +321,9 @@
         <div class="col-xs-12 backgroundPano imgBackground">
             <h1 class="titleStylePhone1 titleStyleDesktop" style="text-align:center;">Max Berkowitz</h1>
         </div>
-        <div class="col-12" style="text-align:center">
+        <div style="text-align:center">
             <div class="dropdown paraFont" style="margin-bottom:90px; margin-top:90px;">
-                <button class="btn btn-default dropdown-toggle whiteButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="font-size:17pt; text-align:center">
+                <button class="btn btn-default dropdown-toggle whiteButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="font-size:17pt;">
                     Website Introduction <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu whiteButton" role="menu" aria-labelledby="dropdownMenu1" style=" font-size:15pt;">
@@ -315,14 +353,20 @@
 
                     </p>
                 </div>
-                <div class="row video-container" id="videoIntro" style="display: none">
-                    <iframe src="https://www.youtube.com/embed/W7xgEIcl9qA" frameborder="0" allow="autoplay; encrypted-media" style="padding-bottom: 1vw" allowfullscreen></iframe>
+                <div class="row">
+                <div class=" col-sm-2"></div>
+                <div class="col-sm-8 col-xs-12">
+                    <div class="row video-container" id="videoIntro" style="display: none">
+                        <iframe src="https://www.youtube.com/embed/W7xgEIcl9qA" frameborder="0" allow="autoplay; encrypted-media" style="padding-bottom: 1vw" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class=" col-sm-2"></div>
                 </div>
                 <div class="row" style="margin-bottom: 2vw">
                     <div class="blkBorder blkBackground col-md-6 col-xs-12">
-                        <h2 class="paraHeader" style="color: white">About The Blog</h2>
-                        <p class="paraFont" style="color: white">
-                            This is a student lifestyle blog with an emphasis on the path to the professional world and managing
+                        <h2 class="paraHeader" style="color: white; margin-top:10px">About The Blog</h2>
+                        <p class="paraFont" style="color: white; margin-top:10px">
+                            This is a student life blog with an emphasis on the path to the professional world and managing
                             all that life throws us along the way. I intend to cast the net wide; whether you’re interested in the
                             fine art of job hunting, the journey towards academic success, or simply staying sane and happy in the
                             millennial rate race, I believe there is something here for you. Take a read and find out!
@@ -330,19 +374,19 @@
                         <button id="blogButton" class="btn blackButton paraFont" onclick="window.location.href='/blog/blogmain.html'">Read More</button>
                     </div>
                     <div class="blkBorder col-md-6 col-xs-12">
-                        <h2 class="paraHeader">About Myself</h2>
-                        <p class="paraFont">
+                        <h2 class="paraHeader" style="margin-top:10px">About Myself</h2>
+                        <p class="paraFont" style="margin-top:10px">
                             My name is Max, and I am a student at Queen’s University in Canada. I study Computer Engineering and
                             Applied Mathematics, a special undergraduate engineering degree that is a crossroads between software and
                             advanced mathematical practices. That said, I am much more than my degree. In fact, I hesitate to mention
                             it at all! Please read on so I can fully introduce myself!
                         </p>
-                        <button class="btn whiteButton paraFont" onclick="window.location.href='/about/max.html'">Read More</button>
+                        <button class="btn whiteButton paraFont" onclick="window.location.href='/blog/blog1.html'">Read More</button>
                     </div>
                 </div>
                 <div class="row blkBorder blkBackground" style="margin-bottom: 0.5vw;">
                     <div class="col-12">
-                        <h2 class="paraHeader" style="color: white">Note About The Website</h2>
+                        <h2 class="paraHeader" style="color: white; margin-top:10px">Note About The Website</h2>
                         <p class="paraFont" style="color: white; white-space: pre-line">
                             This website is the toddler-evolved version of a thought-baby which was first conceived around December of 2017. Since then, I have poured every available moment into its growth. However, thought-baby parenting is a learning process, and I would happily accept all the help I can get! This is my first time blogging, website designing, and writing web-related code (HTML, CSS, JavaScript, etc.), and I am not using WordPress or any equivalent design tools.
                             So, if you are going through this website thinking:
